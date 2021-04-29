@@ -13,11 +13,9 @@ public class HeavyCavalry extends MilitaryUnit {
 
     @Override
     public int doDamage() {
-        int damage = 0;
+        int damage = super.doDamage();
         if (numberOfAttacks == 0) {
-            damage = super.doDamage() * 3;
-        } else {
-            damage = super.doDamage();
+            damage *= 3;
         }
         numberOfAttacks++;
         return damage;
