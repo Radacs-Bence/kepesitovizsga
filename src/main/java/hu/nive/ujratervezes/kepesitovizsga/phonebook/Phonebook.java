@@ -23,7 +23,7 @@ public class Phonebook {
     private void writeLines(Map<String, String> contacts, BufferedWriter writer){
         try {
             for (Map.Entry<String, String> entry: contacts.entrySet()) {
-                writer.write(entry.getKey() + ": " + entry.getValue());
+                writer.write(String.format("%s: %s", entry.getKey(), entry.getValue()));
                 writer.newLine();
             }
         } catch (IOException ioe) {
